@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :find_post, only: %i[update edit delete]
+    before_action :find_post, only: %i[update edit destroy]
     def index;
         @posts = Post.all.order(created_at: :desc)
     end
@@ -7,15 +7,16 @@ class PostsController < ApplicationController
     def new
         @post = Post.new
     end
+    def show
+        @post=Post.find_by(id:params[:id])
+    end
     def create
-        def create
-            @post = Post.new(post_params)
-            if @post.save
-              flash[:notice] = "投稿を作成しました"
-              redirect_to('/posts/index')
-            else
-              render('/posts/new')
-            end
+        @post = Post.new(post_params)
+        if @post.save
+            flash[:notice] = "投稿を作成しました"
+            redirect_to('/posts/index')
+        else
+            render('/posts/new')
         end 
     end
     def edit;
@@ -29,7 +30,8 @@ class PostsController < ApplicationController
             render('/posts/edit')
         end
     end
-    def delete
+    
+    def destroy
         if @post.destroy
             flash[:notice] = "投稿を削除しました"
             redirect_to('/posts/index')
@@ -37,13 +39,12 @@ class PostsController < ApplicationController
             redirect_to('/posts/edit')
         end
     end
+
     private
     def post_params
-        params.require(:post).permit(:content)
+        params.permit(:content)
     end
     def find_post
         @post = Post.find(params[:id])
     end
-    
-    
 end

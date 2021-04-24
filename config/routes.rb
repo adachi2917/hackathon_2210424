@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get 'posts/new', to: 'posts#new'
   get 'posts/index', to: 'posts#index'
+  get 'posts/:id', to: 'posts#show'
   post 'posts/create', to: 'posts#create'
   get 'posts/:id/edit', to: 'posts#edit'
-  patch 'posts/:id/update', to: 'posts#update'
-  delete 'posts/:id/delete', to: 'posts#delete'
-  
+  post 'posts/:id/update', to: 'posts#update'
+  post 'posts/:id/destroy', to: 'posts#destroy'
 end
