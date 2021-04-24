@@ -1,0 +1,104 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.macbook-1 {
+	align-items: flex-start;
+	background-color: rgba(255, 255, 255, 1);
+	display: flex;
+	flex-direction: column;
+	height: 700px;
+	width: 1152px;
+}
+.macbook-1 .flex-col {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 39px;
+	min-height: 390px;
+	width: 550px;
+}
+.macbook-1 .background {
+	align-items: flex-end;
+	background-image: url("/oip-1.png");
+	background-position: 50% 50%;
+	background-size: cover;
+	display: flex;
+	height: 610px;
+	justify-content: flex-end;
+	min-width: 1152px;
+	padding: 13px 48px;
+}
+.macbook-1 .box1 {
+	align-items: flex-end;
+	background-color: rgba(249, 196, 59, 1);
+	display: flex;
+	height: 90px;
+	width: 1250px;
+	min-width: 1000px;
+	padding: 24px 0;
+}
+.macbook-1 .box2 {
+	align-items: flex-start;
+	background-image: url("/ellipse-2@1x.png");
+	background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+	height: 150px;
+	min-width: 550px;
+	padding: 0 24px;
+	justify-content: center;
+}
+.macbook-1 .box3 {
+	background-image: url("/ellipse-2@1x.png");
+	background-size: 100% 100%;
+	display: flex;
+	height: 150px;
+	justify-content: center;
+	min-width: 550px;
+	padding: 0 24px;
+	align-items: center;
+}
+.macbook-1 .r700ba2d16c2f4d-bf4644eb525e9-1 {
+	height: 583px;
+	object-fit: cover;
+	width: 426px;
+}
+.macbook-1 .text-1 {
+	letter-spacing: 0px;
+	margin-top: -35px;
+	min-height: 41px;
+	min-width: 72px;
+	text-align: center;
+}
+.macbook-1 .text-2 {
+	color: var(--black);
+	font-family: "Roboto", Helvetica;
+	font-size: 35px;
+	font-weight: 100;
+	letter-spacing: 0px;
+	min-height: 41px;
+	text-align: center;
+	width: 873px;
+}
+.macbook-1 .text-3 {
+	letter-spacing: 0px;
+	margin-top: -39px;
+	min-height: 47px;
+	text-align: center;
+	width: 100px;
+}
+@import url("https://fonts.googleapis.com/css?family=Roboto:700,100");
+.container-center-horizontal {
+	pointer-events: none;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.container-center-horizontal > * {
+	pointer-events: auto;
+	flex-shrink: 0;
+}
+.screen a {
+	text-decoration: none;
+	display: contents;
+}
